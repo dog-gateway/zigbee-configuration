@@ -3,18 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://elite.polito.it/dogHomeConfiguration home_configuration.xsd ">
 	<dhc:buildingEnvironment>
-		<dhc:building name="Alcotra">
-			<dhc:flat class="Flat" name="Alcotra_DemoBox">
-				<dhc:room class="StorageRoom" name="Alcotra_DemoBox">
-					<dhc:ceiling class="Ceiling" name="ceiling" />
-					<dhc:floor class="Floor" name="floor" />
-					<dhc:wall class="Wall" name="wall" />
+		<dhc:building id="Alcotra">
+			<dhc:flat class="Flat" id="Alcotra_DemoBox">
+				<dhc:room class="StorageRoom" id="Alcotra_DemoBox">
+					<dhc:ceiling class="Ceiling" id="ceiling" />
+					<dhc:floor class="Floor" id="floor" />
+					<dhc:wall class="Wall" id="wall" />
 				</dhc:room>
 			</dhc:flat>
 		</dhc:building>
 	</dhc:buildingEnvironment>
 	<dhc:controllables>		
-		<dhc:device domoticSystem="ZigBee" name="MainsPowerOutlet_2"
+		<dhc:device domoticSystem="ZigBee" id="MainsPowerOutlet_2"
 			class="MeteringPowerOutlet">
 			<dhc:description>A MeteringPowerOutlet instance named MainsPowerOutlet_2
 			</dhc:description>
@@ -148,7 +148,7 @@
 		
 		
 		
-		<dhc:device domoticSystem="ZigBee" name="SmartInfoEmulator"
+		<dhc:device domoticSystem="ZigBee" id="SmartInfoEmulator"
 			class="EnergyAndPowerMeter">
 			<dhc:description>A smart info instance named SmartInfoEmulator
 			</dhc:description>
