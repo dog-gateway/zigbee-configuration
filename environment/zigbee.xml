@@ -380,5 +380,37 @@
                 </dhc:statevalues>
             </dhc:state>
         </dhc:device>
+        <dhc:device class="MovementSensor" id="MovementSensor_5149012972033418" domoticSystem="ZigBee" gateway="zigbee-gateway">
+            <dhc:description>New Device of type MovementSensor</dhc:description>
+            <dhc:isIn></dhc:isIn>
+            <dhc:param name="serialNumber" value="5149012972033418"/>
+            <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="StateChangeNotification" id="StateChangeNotification_MovementSensor_5149012972033418">
+                        <dhc:param name="nParams" value="1"/>
+                        <dhc:param name="notificationName" value="stateChanged"/>
+                        <dhc:param name="notificationParamName" value="newState" type="State"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:notificationFunctionality class="MovementNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="MovementCeasedNotification" id="MovementCeasedNotification_MovementSensor_5149012972033418">
+                        <dhc:param name="nParams" value="0"/>
+                        <dhc:param name="notificationName" value="ceasedMovement"/>
+                    </dhc:notification>
+                    <dhc:notification class="MovementDetectedNotification" id="MovementDetectedNotification_MovementSensor_5149012972033418">
+                        <dhc:param name="nParams" value="0"/>
+                        <dhc:param name="notificationName" value="detectedMovement"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:state class="MovementState">
+                <dhc:statevalues>
+                    <dhc:statevalue class="MovingStateValue" name="isMoving"/>
+                    <dhc:statevalue class="NotMovingStateValue" name="notMoving"/>
+                </dhc:statevalues>
+            </dhc:state>
+        </dhc:device>
     </dhc:controllables>
 </dhc:dogHomeConfiguration>
