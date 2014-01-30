@@ -348,39 +348,35 @@
                 </dhc:statevalues>
             </dhc:state>
         </dhc:device>
-        <dhc:device class="LightSensor" id="LightSensor_5149012971970899" domoticSystem="ZigBee" gateway="zigbee-gateway">
-            <dhc:description>New Device of type LightSensor</dhc:description>
+        <dhc:device class="DoorSensor" id="DoorSensor_5149012972032693" domoticSystem="ZigBee" gateway="zigbee-gateway">
+            <dhc:description>New Device of type DoorSensor</dhc:description>
             <dhc:isIn></dhc:isIn>
-            <dhc:param name="serialNumber" value="5149012971970899"/>
-            <dhc:controlFunctionality class="LightSensingFunctionality">
-                <dhc:commands>
-                    <dhc:command class="GetLuminanceCommand" name="GetLuminanceCommand_LightSensor_5149012971970899" id="GetLuminanceCommand_LightSensor_5149012971970899">
-                        <dhc:param name="realCommandName" value="getLuminance"/>
-                        <dhc:param name="returnType" value="Measure"/>
-                    </dhc:command>
-                </dhc:commands>
-            </dhc:controlFunctionality>
+            <dhc:param name="serialNumber" value="5149012972032693"/>
             <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
                 <dhc:notifications>
-                    <dhc:notification class="StateChangeNotification" id="StateChangeNotification_LightSensor_5149012971970899">
+                    <dhc:notification class="StateChangeNotification" id="StateChangeNotification_DoorSensor_5149012972032693">
+                        <dhc:param name="nParams" value="1"/>
                         <dhc:param name="notificationName" value="stateChanged"/>
                         <dhc:param name="notificationParamName" value="newState" type="State"/>
                     </dhc:notification>
                 </dhc:notifications>
             </dhc:notificationFunctionality>
-            <dhc:notificationFunctionality class="LuminosityNotificationFunctionality">
+            <dhc:notificationFunctionality class="OpenCloseNotificationFunctionality">
                 <dhc:notifications>
-                    <dhc:notification class="LuminosityMeasurementNotification" id="LuminosityMeasurementNotification_LightSensor_5149012971970899">
-                        <dhc:param name="nParams" value="2"/>
-                        <dhc:param name="notificationName" value="newLuminosityValue"/>
-                        <dhc:param name="unitOfMeasure" value="Lux"/>
-                        <dhc:param name="notificationParamName" value="luminosityValue" type="Measure"/>
+                    <dhc:notification class="CloseNotification" id="CloseNotification_DoorSensor_5149012972032693">
+                        <dhc:param name="nParams" value="0"/>
+                        <dhc:param name="notificationName" value="close"/>
+                    </dhc:notification>
+                    <dhc:notification class="OpenNotification">
+                        <dhc:param name="nParams" value="0"/>
+                        <dhc:param name="notificationName" value="open"/>
                     </dhc:notification>
                 </dhc:notifications>
             </dhc:notificationFunctionality>
-            <dhc:state class="LightIntensityState">
+            <dhc:state class="OpenCloseState">
                 <dhc:statevalues>
-                    <dhc:statevalue class="LevelStateValue" name=""/>
+                    <dhc:statevalue class="OpenStateValue" name="open"/>
+                    <dhc:statevalue class="CloseStateValue" name="close"/>
                 </dhc:statevalues>
             </dhc:state>
         </dhc:device>
