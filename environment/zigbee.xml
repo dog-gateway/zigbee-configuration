@@ -40,6 +40,18 @@
                     </dhc:command>
                 </dhc:commands>
             </dhc:controlFunctionality>
+			<dhc:notificationFunctionality class="NetworkManagementNotificationFunctionality">
+				<dhc:notifications>
+					<dhc:notification class="NetworkClosedNotification">
+						<dhc:param name="nParams" value="0"/>
+						<dhc:param value="close" name="notificationName" />
+					</dhc:notification>
+					<dhc:notification class="NetworkOpenedNotification">
+						<dhc:param name="nParams" value="0"/>
+						<dhc:param value="open" name="notificationName" />
+					</dhc:notification>
+				</dhc:notifications>
+			</dhc:notificationFunctionality>            
         </dhc:device>
         <dhc:device class="EnergyAndPowerMeter" id="EnergyAndPowerMeter_3521399293210525709" domoticSystem="ZigBee" gateway="zigbee-gateway">
             <dhc:description>New Device of type EnergyAndPowerMeter
@@ -70,15 +82,6 @@
                     </dhc:command>
                 </dhc:commands>
             </dhc:controlFunctionality>
-            <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="StateChangeNotification">
-                        <dhc:param name="nParams" value="1"/>
-                        <dhc:param name="notificationName" value="stateChanged"/>
-                        <dhc:param name="notificationParamName" value="newState" type="State"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
             <dhc:notificationFunctionality class="SinglePhaseReactiveEnergyMeasurementNotificationFunctionality">
                 <dhc:notifications>
                     <dhc:notification class="SinglePhaseReactiveEnergyMeasurementNotification">
@@ -181,15 +184,18 @@
                     </dhc:command>
                 </dhc:commands>
             </dhc:controlFunctionality>
-            <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="StateChangeNotification">
-                        <dhc:param name="nParams" value="1"/>
-                        <dhc:param name="notificationName" value="stateChanged"/>
-                        <dhc:param name="notificationParamName" value="newState" type="State"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
+			<dhc:notificationFunctionality class="OnOffNotificationFunctionality">
+				<dhc:notifications>
+					<dhc:notification id="OnNotification_MeteringPowerOutlet_3521399293210525902" class="OnNotification">
+						<dhc:param name="nParams" value="0"/>
+						<dhc:param value="on" name="notificationName" />
+					</dhc:notification>
+					<dhc:notification id="OffNotification_MeteringPowerOutlet_3521399293210525902" class="OffNotification">
+						<dhc:param name="nParams" value="0"/>
+						<dhc:param value="off" name="notificationName" />
+					</dhc:notification>
+				</dhc:notifications>
+			</dhc:notificationFunctionality>
             <dhc:notificationFunctionality class="SinglePhaseReactiveEnergyMeasurementNotificationFunctionality">
                 <dhc:notifications>
                     <dhc:notification class="SinglePhaseReactiveEnergyMeasurementNotification">
