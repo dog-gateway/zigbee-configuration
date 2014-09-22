@@ -57,7 +57,7 @@
             <dhc:description>New Device of type EnergyAndPowerMeter
 			</dhc:description>
             <dhc:isIn></dhc:isIn>
-            <dhc:param name="serialNumber" value="3521399293210525709"/>
+            <dhc:param name="serialNumber" value="3521399293210525709" type="network" />
             <dhc:controlFunctionality class="SinglePhaseActivePowerMeasurementFunctionality">
                 <dhc:commands>
                     <dhc:command class="Get1PhaseActivePowerCommand" name="Get1PhaseActivePowerCommand_EnergyAndPowerMeter_3521399293210525709" id="Get1PhaseActivePowerCommand_EnergyAndPowerMeter_3521399293210525709">
@@ -86,7 +86,7 @@
                 <dhc:notifications>
                     <dhc:notification class="SinglePhaseReactiveEnergyMeasurementNotification">
                         <dhc:param name="notificationName" value="newReactiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Varh"/>
+                        <dhc:param name="measuredIn" value="Varh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -95,7 +95,7 @@
                 <dhc:notifications>
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification">
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -105,7 +105,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="powerValue" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -141,7 +141,7 @@
             <dhc:description>New Device of type MeteringPowerOutlet
 			</dhc:description>
             <dhc:isIn></dhc:isIn>
-            <dhc:param name="serialNumber" value="3521399293210525902"/>
+            <dhc:param name="serialNumber" value="3521399293210525902" type="network" />
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_3521399293210525902" id="OffCommand_MeteringPowerOutlet_3521399293210525902">
@@ -200,7 +200,7 @@
                 <dhc:notifications>
                     <dhc:notification class="SinglePhaseReactiveEnergyMeasurementNotification">
                         <dhc:param name="notificationName" value="newReactiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Varh"/>
+                        <dhc:param name="measuredIn" value="Varh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -209,7 +209,7 @@
                 <dhc:notifications>
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification">
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -227,7 +227,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="powerValue" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -262,7 +262,7 @@
         <dhc:device class="TemperatureAndHumiditySensor" id="TemperatureAndHumiditySensor_5149012992031070" domoticSystem="ZigBee" gateway="zigbee-gateway">
             <dhc:description>New Device of type TemperatureAndHumiditySensor</dhc:description>
             <dhc:isIn></dhc:isIn>
-            <dhc:param name="serialNumber" value="5149012992031070"/>
+            <dhc:param name="serialNumber" value="5149012992031070" type="network" />
             <dhc:controlFunctionality class="TemperatureMeasurementFunctionality">
                 <dhc:commands>
                     <dhc:command class="GetTemperatureCommand" name="GetTemperatureCommand_TemperatureAndHumiditySensor_5149012992031070" id="GetTemperatureCommand_TemperatureAndHumiditySensor_5149012992031070">
@@ -284,7 +284,7 @@
                     <dhc:notification class="TemperatureMeasurementNotification" id="TemperatureMeasurementNotification_TemperatureAndHumiditySensor_5149012992031070">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newTemperatureValue"/>
-                        <dhc:param name="unitOfMeasure" value="C"/>
+                        <dhc:param name="measuredIn" value="C"/>
                         <dhc:param name="notificationParamName" value="temperatureValue" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -294,7 +294,7 @@
                     <dhc:notification class="HumidityMeasurementNotification" id="HumidityMeasurementNotification_TemperatureAndHumiditySensor_5149012992031070">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="changedRelativeHumidity"/>
-                        <dhc:param name="unitOfMeasure" value="%"/>
+                        <dhc:param name="measuredIn" value="%"/>
                         <dhc:param name="notificationParamName" value="relativeHumidity" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
